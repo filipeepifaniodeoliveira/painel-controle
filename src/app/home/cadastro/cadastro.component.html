@@ -1,0 +1,73 @@
+<app-sidebar></app-sidebar>
+
+<div>
+  <div class="row">
+    <div class="container avalade">
+      <h3>Seja Bem Vindo</h3>
+      <p>SCI - Sistema de Controle de Integrado</p>
+    </div>
+  </div>
+</div>
+
+<form #frmCadastro="ngForm" (ngSubmit)="onCadastro(frmCadastro)">
+  <div class="formulario container">
+    <div class="row">
+      <div class="col-md-2">
+        <label>PID</label>
+        <input type="email" class="form-control" name="pid" ngModel placeholder="PID">
+      </div>
+      <div class="col-md-3">
+        <label>EID</label>
+        <input type="email" class="form-control" name="eid" ngModel placeholder="EID">
+      </div>
+      <div class="col-md-5">
+        <label>NOME</label>
+        <input type="email" class="form-control" name="name" ngModel placeholder="NOME">
+      </div>
+      <div class="col-md-2">
+        <label>LEVEL</label>
+        <input type="email" class="form-control" name="level" ngModel placeholder="LEVEL">
+      </div>
+    </div>
+
+    <div class="row distance">
+      <div class="col-md-4">
+        <label>PROJETO</label>
+        <input type="email" class="form-control" name="projeto" ngModel placeholder="PROJETO">
+      </div>
+      <div class="col-md-4">
+        <label>GERENTE</label>
+        <input type="email" class="form-control" name="gerente" ngModel placeholder="GERENTE">
+      </div>
+      <div class="col-md-4">
+        <label>ALOCAÇÃO</label>
+        <input type="email" class="form-control" name="alocacao" ngModel placeholder="ALOCAÇÃO">
+      </div>
+    </div>
+
+    <div class="row distance">
+      <div class="col-md-4">
+        <label>TECNOLOGIA</label>
+        <input type="email" class="form-control" name="tecnologia" ngModel placeholder="TECNOLOGIA">
+      </div>
+      <div class="col-md-4">
+        <label>ROLL - ON </label>
+        <input type="email" class="form-control" name="roll_on" ngModel placeholder="ROLL ON">
+      </div>
+      <div class="col-md-4">
+        <label>ROLL - OFF</label>
+        <input type="email" class="form-control" name="roll_off" ngModel placeholder="ROLL OFF">
+      </div>
+    </div>
+
+    <div class="row distance">
+      <div class="col-md-4">
+        <label>OBSERVAÇÕES GERAIS</label>
+        <textarea class="form-control" rows="5" name="observacoes" ngModel class="textArea"></textarea>
+      </div>
+    </div>
+
+  </div>
+  <button type="submit" class="btn btn-primary send">Submit</button>
+
+</form>

@@ -1,0 +1,67 @@
+<div class="container" *ngIf="actionComponent == 'init'">
+  <div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Rest Adapter</h2>
+
+    <form #frmLogin="ngForm" class="login-container">
+      <p>
+        <input type="submit" value="Login" (click)="setAction('login')">
+      </p>
+      <p>
+        <input type="submit" value="Register" (click)="setAction('register')"> 
+      </p>
+    </form>
+  </div>
+</div>
+
+
+<div class="container" *ngIf="actionComponent == 'login'">
+  <div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Log in</h2>
+
+    <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
+      <p>
+        <input type="email" name="email" placeholder="Email" ngModel required>
+      </p>
+      <p>
+        <input type="password" name="password" placeholder="Password" ngModel required>
+      </p>
+      <p>
+        <input type="submit" value="Send">
+      </p>
+      <p>
+        <input type="submit" value="Return" (click)="retunPage();">
+      </p>
+    </form>
+  </div>
+</div>
+
+
+<div class="container" *ngIf="actionComponent == 'register'">
+  <div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Create an account</h2>
+
+    <form #frmRegister="ngForm" class="login-container" (ngSubmit)="onRegister(frmRegister)">
+      <p>
+        <input type="text" name="name" placeholder="Name" ngModel required>
+      </p>
+      <p>
+        <input type="email" name="email" placeholder="Email" ngModel required>
+      </p>
+      <p>
+        <input type="password" name="password" placeholder="Password" ngModel required>
+      </p>
+      <p>
+        <input type="submit" value="Register">
+      </p>
+      <p>
+        <input type="submit" value="Return" (click)="retunPage();">
+      </p>
+    </form>
+  </div>
+</div>
